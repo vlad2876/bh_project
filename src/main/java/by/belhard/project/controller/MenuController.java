@@ -23,6 +23,7 @@ public class MenuController {
 
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
             while (!"5".equals(input)) {
 
                 try {
@@ -41,7 +42,7 @@ public class MenuController {
                         System.err.println("Invalid username!\nTry again");
                     }
                 } catch (SQLException e) {
-                    System.out.println(1);
+                    e.printStackTrace();
                 }
             }
 

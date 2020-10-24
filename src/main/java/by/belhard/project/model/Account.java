@@ -21,12 +21,6 @@ public class Account {
         this.password = password;
     }
 
-    public Account(int id, String username, int cash) {
-        this.id = id;
-        this.username = username;
-        this.cash = cash;
-    }
-
     public boolean checkPassword(String rawPassword){
         return DigestUtils.sha256Hex(rawPassword).equals(password);
     }
