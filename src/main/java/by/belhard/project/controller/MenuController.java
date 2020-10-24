@@ -49,10 +49,11 @@ public class MenuController {
 
         String input = "";
 
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+
         while (!"5".equals(input)) {
 
-            try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
-
+            try {
                 System.out.println(MAIN_MENU);
                 input = reader.readLine();
 
@@ -92,9 +93,12 @@ public class MenuController {
                 System.err.println("Not enough money!");
             } catch (InvalidInputException e) {
                 System.err.println("Invalid input!");
-            } catch (IOException | SQLException e) {
+            } catch (SQLException e) {
                 e.printStackTrace();
             }
+        }
+        }catch (IOException e){
+            e.printStackTrace();
         }
 
     }
