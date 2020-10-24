@@ -12,24 +12,19 @@ public class Account {
     private int id;
     private String username;
     private int cash;
-    @Setter(AccessLevel.NONE)
     private String password;
 
     public Account(int id, String username, int cash, String password) {
         this.id = id;
         this.username = username;
         this.cash = cash;
-        setPassword(password);
+        this.password = password;
     }
 
     public Account(int id, String username, int cash) {
         this.id = id;
         this.username = username;
         this.cash = cash;
-    }
-
-    public void setPassword(String password) {
-        this.password = DigestUtils.sha256Hex(password);
     }
 
     public boolean checkPassword(String rawPassword){

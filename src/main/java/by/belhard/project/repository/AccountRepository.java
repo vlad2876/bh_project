@@ -41,8 +41,9 @@ public class AccountRepository {
             int id = resultSet.getInt("id");
             String username = resultSet.getString("username");
             int cash = resultSet.getInt("cash");
+            String password = resultSet.getString("password");
 
-            return new Account(id, username, cash);
+            return new Account(id, username, cash, password);
         }
 
     }
