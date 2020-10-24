@@ -21,8 +21,8 @@ public class MenuController {
 
         String input = "";
 
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
-
+        try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             while (!"5".equals(input)) {
 
                 try {
@@ -54,7 +54,8 @@ public class MenuController {
 
         String input = "";
 
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+        try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
             while (!"5".equals(input)) {
 
