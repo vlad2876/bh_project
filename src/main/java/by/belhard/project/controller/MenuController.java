@@ -13,7 +13,7 @@ import java.sql.SQLException;
 public class MenuController {
 
     private static final String MAIN_MENU =
-            String.format("♥♥♥♥♥♥♥♥♥♥\n1. Play - 1$\n2. Balance\n3. Deposit\n4. Cash out\n5. Logout\n♥♥♥♥♥♥♥♥♥♥");
+            String.format("♥♥♥♥♥♥♥♥♥♥\nr. rules\n1. Play - 1$\n2. Balance\n3. Deposit\n4. Cash out\n5. Logout\n♥♥♥♥♥♥♥♥♥♥");
 
     AccountService accountService = new AccountService();
 
@@ -57,6 +57,9 @@ public class MenuController {
                 input = reader.readLine();
 
                 switch (input) {
+                    case "r":
+                        System.out.println("☼☼☼ - 5$\n○○○ - 10$\n♥♥♥ - 50$\n♂♂♂ - 100$\n$$$ - 500$\n777 - JACKPOT!!! (1000$)");
+                        break;
                     case "1":
                         if (account.getCash() > 0) {
                             System.out.println("Good luck!");
