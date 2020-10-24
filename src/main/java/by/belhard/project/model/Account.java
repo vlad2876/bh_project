@@ -22,6 +22,12 @@ public class Account {
         setPassword(password);
     }
 
+    public Account(int id, String username, int cash) {
+        this.id = id;
+        this.username = username;
+        this.cash = cash;
+    }
+
     public void setPassword(String password) {
         this.password = DigestUtils.sha256Hex(password);
     }
